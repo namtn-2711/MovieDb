@@ -24,7 +24,7 @@ class TableViewDataCell: UITableViewCell {
 
     }
     
-    func fetchImage(data:String) {
+    func fetchImage(data:String){
         let url = "https://image.tmdb.org/t/p/w342/\(data)"
         URLSession.shared.dataTask(with: URLRequest(url: URL(string: url)!)){
             (data, response, error) in
@@ -35,7 +35,7 @@ class TableViewDataCell: UITableViewCell {
                     self.poster.image = UIImage(data: datas!)
                 }
             }catch{
-                print("")
+                print(error)
             }
         }.resume()
     }

@@ -13,16 +13,25 @@ class Controller: UIViewController {
     
     let tableviewData : UITableView = {
         let tableview = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        tableview.translatesAutoresizingMaskIntoConstraints = false
         return tableview
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let nib = UINib(nibName: "TableViewDataCell", bundle: .main)
         tableviewData.register(nib, forCellReuseIdentifier: "cellData")
         tableviewData.dataSource = self
         tableviewData.delegate = self
+        
+        
         view.addSubview(tableviewData)
+        tableviewData.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        tableviewData.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        tableviewData.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        tableviewData.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        
         fetchData()
         
     }
@@ -65,6 +74,15 @@ extension Controller:UITableViewDataSource,UITableViewDelegate{
         cell.rating.text = String(data.voteAverage)
         cell.fetchImage(data: data.posterPath)
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailView = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let data = movieData[indexPath.row]
+        detailView.fetchImage(data: data.posterPath)
+        detailView.fetchLabel(title: data.title, releaseDate: data.releaseDate, overview: data.overview)
+        self.navigationController?.pushViewController(detailView, animated: true)
     }
     
     
