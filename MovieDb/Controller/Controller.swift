@@ -78,7 +78,7 @@ extension Controller:UITableViewDataSource,UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailView = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let detailView = self.storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailView
         let data = movieData[indexPath.row]
         detailView.fetchImage(data: data.posterPath)
         detailView.fetchLabel(title: data.title, releaseDate: data.releaseDate, overview: data.overview)

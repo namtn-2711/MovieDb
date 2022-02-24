@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailView: UIViewController {
         
     let poster = UIImageView()
     let titleLabel = UILabel()

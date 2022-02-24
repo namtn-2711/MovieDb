@@ -17,7 +17,7 @@
 		17E9E1E727C5482B00641CA4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9E1E627C5482A00641CA4 /* Model.swift */; };
 		17E9E1EB27C5BE6900641CA4 /* TableViewDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17E9E1EA27C5BE6900641CA4 /* TableViewDataCell.xib */; };
 		17E9E1ED27C5BE8C00641CA4 /* TableViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9E1EC27C5BE8C00641CA4 /* TableViewDataCell.swift */; };
-		17E9E1EF27C60AC200641CA4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9E1EE27C60AC200641CA4 /* DetailViewController.swift */; };
+		17E9E1EF27C60AC200641CA4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9E1EE27C60AC200641CA4 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		17E9E1E627C5482A00641CA4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		17E9E1EA27C5BE6900641CA4 /* TableViewDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewDataCell.xib; sourceTree = "<group>"; };
 		17E9E1EC27C5BE8C00641CA4 /* TableViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataCell.swift; sourceTree = "<group>"; };
-		17E9E1EE27C60AC200641CA4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		17E9E1EE27C60AC200641CA4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			children = (
 				17E9E1EA27C5BE6900641CA4 /* TableViewDataCell.xib */,
 				17E9E1EC27C5BE8C00641CA4 /* TableViewDataCell.swift */,
-				17E9E1EE27C60AC200641CA4 /* DetailViewController.swift */,
+				17E9E1EE27C60AC200641CA4 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 				17E9E1CC27C48C0800641CA4 /* AppDelegate.swift in Sources */,
 				17E9E1CE27C48C0800641CA4 /* SceneDelegate.swift in Sources */,
 				17E9E1E727C5482B00641CA4 /* Model.swift in Sources */,
-				17E9E1EF27C60AC200641CA4 /* DetailViewController.swift in Sources */,
+				17E9E1EF27C60AC200641CA4 /* DetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
